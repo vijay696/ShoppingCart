@@ -1,0 +1,113 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:mvc="http://www.springframework.org/schema/mvc"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   
+   
+xmlns:mv="http://www.springframework.org/schema/mvc"
+ xmlns:security="http://www.springframework.org/schema/security"
+
+   
+   xsi:schemaLocation="
+   http://www.springframework.org/schema/mvc 
+http://www.springframework.org/schema/mvc/spring-mvc.xsd?
+   
+   http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+      http://www.springframework.org/schema/mvc
+      http://www.springframework.org/schema/mvc/spring-mvc.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/security
+         http://www.springframework.org/schema/security/spring-security.xsd"> 
+
+   <context:component-scan base-package="com.niit.*" />
+<mv:resources mapping="/resources/**" location="/WEB-INF/resources/"/>
+<mv:annotation-driven/>
+
+   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+      <property name="prefix">
+       <value>/WEB-INF/views/</value>
+       </property>
+       
+      <property name="suffix">
+       <value>.jsp</value>
+       </property>
+   </bean>
+   
+     
+   
+   <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.h2.Driver" />
+        <property name="url" value="jdbc:h2:tcp://localhost/~/test3" />
+        <property name="username" value="sa" />
+        <property name="password" value="sa" />
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" >
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+            </props>
+        </property>
+        <property name="packagesToScan">
+            <list>
+                <value>com.niit.*</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+    
+
+    <security:http auto-config="true">
+        <security:intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
+        <security:intercept-url pattern="/user/**" access="ROLE_USER" />
+        
+        <security:form-login
+            login-page="/login"
+            default-target-url="/"
+            authentication-failure-url="/login?error"
+          
+            username-parameter="username"
+            password-parameter="password" />
+
+
+        <security:logout
+            logout-success-url="/login?logout" />
+    </security:http>
+
+    <security:authentication-manager>
+        <security:authentication-provider>
+            <security:jdbc-user-service data-source-ref="dataSource"
+                                        authorities-by-username-query="SELECT username, role From userrole WHERE username = ?"
+                                        users-by-username-query="SELECT username, password, enabled FROM users WHERE username = ?" />
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    
+</beans>
+   
+   
+   
+   
+   
+   
+
+
+
+
+
+
+
+
+
+
