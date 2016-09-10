@@ -78,12 +78,23 @@
 		<div class="row">
 			<div id="cssmenu">
 			<h1>THUNDERSPEED</h1>
-				<ul>
+			
+  <c:if test="${pageContext.request.userPrincipal.name != null}">
+<c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+<a href="<c:url value="/" />">Cart</a>
+</c:if>
+<c:if test="${pageContext.request.userPrincipal.name  == 'admin'}">
+<a href="<c:url value="/admin" />">View Inventory</a>
+<a href="<c:url value="/" />">View Customer</a>
+</c:if>
+<a>Hello, ${pageContext.request.userPrincipal.name}</a>
+<a href="<c:url value="/j_spring_security_logout" />">Sign Out</a>
+</c:if>				<ul>
 				   <li class='active'><a href="index.html">Home</a></li>
 				   <li><a href="#">Cars</a></li>
 				   <li><a href="single.html">About</a></li>
 				   <li><a href="contact.html">Contact</a></li>
-				   <li><a href="login">login</a></li>
+				   <li><a href="login1">login</a></li>
 				   <li><a href="register">register</a></li>
 				</ul>
 			</div>

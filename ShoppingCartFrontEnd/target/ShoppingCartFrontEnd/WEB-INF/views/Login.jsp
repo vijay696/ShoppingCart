@@ -1,12 +1,80 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>  
+    <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+    
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
+    
+    
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="utf-8">
+	<title>zBlueCar - Free Html5 Templates</title>
+	<meta name="description" content="Free Responsive Html5 Css3 Templates | zerotheme.com">
+	<meta name="author" content="www.zerotheme.com">
+	
+    <!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- CSS
+  ================================================== -->
+  
+  
+  
+  	<link  href="<c:url value="resources/css/zerogrid.css"/>" rel="stylesheet">
+	<link  href="<c:url value="resources/css/style.css"/>" rel="stylesheet">
+    
+    
+    <script src="<c:url value="resources/js/jquery-latest.min.js"/>"> </script>
+	<script src="<c:url value="resources/js/script.js"/>"> </script>
+	
+	
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
+	<![endif]-->
+    
 </head>
 <body>
+<div class="wrap-body">
+
+<!--////////////////////////////////////Header-->
+<header class="bg-theme">
+	<div class="wrap-header zerogrid">
+		<div class="row">
+			<div id="cssmenu">
+				<ul>
+				   <li class='active'><a href="index.html">Home</a></li>
+				   <li><a href="#">Cars</a></li>
+				   <li><a href="single.html">About</a></li>
+				   <li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<a href="" class="logo">
+			
+			<img alt="" src="<c:url value="/resources/images/logo.png" />"></img>
+			
+			
+			
+			
+			</a>
+		</div>
+	</div>
+</header>
+
+
+
 
 
 <section id="container">
@@ -19,32 +87,64 @@
 							<div class="wrap-col">
 								<div class="contact">
 									<div class="contact-header">
-										<h5>Register Form</h5>
+										<h5>Login Form</h5>
 									</div>
 									<div id="contact_form">
-										<form name="form1" id="ff" method="post" action="LoginPage">
+										
+										
+										 <form name="form1" id="ff" action="<c:url value='/j_spring_security_check' />" method="post">
+                <c:if test="${not empty error}">
+                    <div class="error" style="color: #ff0000;">${error}</div>
+                </c:if>
+                 <div class="span9 center">
+                   <c:if test="${not empty msg}">
+                <div class="msg">${msg} <br><br></div>
+            </c:if>
+           
+										
 											<label class="row">
-												<div class="col-1-2">
+												<!-- <div class="row">
 													<div class="wrap-col">
-														<input type="email" name="email" id="email" placeholder="Enter email" required="required" />
+														<input type="text" name="name" id="name" placeholder="Enter name" required="required" />
+													</div>
+												</div> -->
+												<div class="row">
+													<div class="wrap-col">
+														<input type="text" name="username" id="username" placeholder="Enter username" required="required" />
 													</div>
 												</div>
-												<div class="col-1-2">
-													<div class="wrap-col">
-														<input type="text" name="password" id="name" placeholder="Enter password" required="required" />
-													</div>
-												</div>
-												
 											</label>
-											<center><input  class="sendButton" type="submit" name="Submit" value="Submit"></center>
-					
-					   <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+											<label class="row">
+												<div class="wrap-col">
+													<input type="text" name="password" id="password" placeholder="password" required="required" />
+												</div>
+											</label>
+											
+											
+											<!-- <label class="row">
+												<div class="wrap-col">
+													<input type="text" name="phone number" id="phone number" placeholder="phone number" required="required" />
+												</div>
+											</label>
+											
+											
+											
+											<label class="row">
+												<div class="wrap-col">
+													<textarea name="address" id="address" class="form-control" rows="4" cols="15" required="required"
+													placeholder="Adrress"></textarea>
+												</div>
+											</label>
+								 -->			<center><input class="sendButton" type="submit" name="Submit" value="Submit"></center>
+									
+									   
+										 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 										</form>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-1-3">
+						<!-- <div class="col-1-3">
 							<div class="wrap-col">
 								<div class="contact-header">
 									<h5>Contact Info</h5>
@@ -65,7 +165,8 @@
 			</div>
 		</div>
 	</div>
-</section>
+ -->
+ </section>
 
 <!--////////////////////////////////////Footer-->
 <footer>

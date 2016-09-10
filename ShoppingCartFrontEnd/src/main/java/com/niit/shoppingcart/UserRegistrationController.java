@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.niit.shoppingcart.dao.UsersDetailDao;
 import com.niit.shoppingcart.model.UsersDetail;
 
-import javax.validation.Valid;
-import java.util.List;
-
 
 /*
  * This Controller is used to register user into the system
