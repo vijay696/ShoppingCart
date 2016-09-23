@@ -2,16 +2,17 @@
     pageEncoding="ISO-8859-1"%>
     
        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-    
+
+   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>zBlueCar - Free Html5 Templates</title>
-	<meta name="description" content="thunder speed | vijay.gr11@gmail.com">
-	<meta name="author" content="www.zerotheme.com">
+	<title>Estore-Vijay G R</title>
+	<meta name="description" content="E-games store | vijay.gr11@gmail.com">
+	<meta name="author" content="www.google.com">
 	
     <!-- Mobile Specific Metas
   ================================================== -->
@@ -23,18 +24,18 @@
   
   
   
-  	<link  href="<c:url value="resources/css/zerogrid.css"/>" rel="stylesheet">
-	<link  href="<c:url value="resources/css/style.css"/>" rel="stylesheet">
-	<link  href="<c:url value="resources/css/responsiveslides.css"/>" rel="stylesheet">
+  	<link  href="<c:url value="/resources/css/zerogrid.css"/>" rel="stylesheet">
+	<link  href="<c:url value="/resources/css/style.css"/>" rel="stylesheet">
+	<link  href="<c:url value="/resources/css/responsiveslides.css"/>" rel="stylesheet">
 	
 	
 	 
 	
 	
-	<script src="<c:url value="resources/js/jquery-latest.min.js"/>"> </script>
-	<script src="<c:url value="resources/js/script.js"/>"> </script>
-    <script src="<c:url value="resources/js/jquery183.min.js"/>"> </script>
-    <script src="<c:url value="resources/js/responsiveslides.min.js"/>"> </script>
+	<script src="<c:url value="/resources/js/jquery-latest.min.js"/>"> </script>
+	<script src="<c:url value="/resources/js/script.js"/>"> </script>
+    <script src="<c:url value="/resources/js/jquery183.min.js"/>"> </script>
+    <script src="<c:url value="/resources/js/responsiveslides.min.js"/>"> </script>
     <script>
 		// You can also use "$(window).load(function() {"
 		$(function () {
@@ -68,6 +69,158 @@
 		<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
     
+    
+    <!-- /start menu -->
+
+<!--    <meta http-equiv="refresh" content="0; URL=./onLoad" /> --> 
+<%--  <spring url value="/resources/menu.css" var="menuCSS" /> 
+ <link href="${menuCSS}" rel="stylesheet" /> 
+ --%>  
+
+<style>
+
+#head{
+color:blue
+}
+/* Main */
+#menu {
+	width: 100%;
+	margin: 0;
+	padding: 10px 0 0 0;
+	list-style: none;
+	background-color: #111;
+	background-image: linear-gradient(#444, #111);
+	border-radius: 50px;
+	box-shadow: 0 2px 1px #9c9c9c;
+}
+
+#menu li {
+	float: left;
+	padding: 0 0 10px 0;
+	position: relative;
+}
+
+#menu a {
+	float: left;
+	height: 25px;
+	padding: 0 25px;
+	color: #999;
+	text-transform: uppercase;
+	font: bold 12px/25px Arial, Helvetica;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #000;
+}
+
+#menu li:hover>a {
+	color: #fafafa;
+}
+
+* html #menu li a:hover { /* IE6 */
+	color: #fafafa;
+}
+
+#menu li:hover>ul {
+	display: block;
+}
+
+/* Sub-menu */
+#menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: none;
+	position: absolute;
+	top: 35px;
+	left: 0;
+	z-index: 99999;
+	background-color: #444;
+	background-image: linear-gradient(#444, #111);
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#menu ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+	box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+}
+
+#menu ul li:last-child {
+	box-shadow: none;
+}
+
+#menu ul a {
+	padding: 10px;
+	height: auto;
+	line-height: 1;
+	display: block;
+	white-space: nowrap;
+	float: none;
+	text-transform: none;
+}
+
+* html #menu ul a { /* IE6 */
+	height: 10px;
+	width: 150px;
+}
+
+*:first-child+html #menu ul a { /* IE7 */
+	height: 10px;
+	width: 150px;
+}
+
+#menu ul a:hover {
+	background-color: #0186ba;
+	background-image: linear-gradient(#04acec, #0186ba);
+}
+
+#menu ul li:first-child a {
+	border-radius: 5px 5px 0 0;
+}
+
+#menu ul li:first-child a:after {
+	content: '';
+	position: absolute;
+	left: 30px;
+	top: -8px;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 8px solid #444;
+}
+
+#menu ul li:first-child a:hover:after {
+	border-bottom-color: #04acec;
+}
+
+#menu ul li:last-child a {
+	border-radius: 0 0 5px 5px;
+}
+
+/* Clear floated elements */
+#menu:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+* html #menu {
+	zoom: 1;
+} /* IE6 */
+*:first-child+html #menu {
+	zoom: 1;
+} /* IE7 */
+</style>
+
+    
+    
+    
 </head>
 <body>
 <div class="wrap-body">
@@ -77,7 +230,7 @@
 	<div class="wrap-header zerogrid">
 		<div class="row">
 			<div id="cssmenu">
-			<h1>THUNDERSPEED</h1>
+		<!-- 	<h1>eE-Games Store</h1> -->
 			
   <c:if test="${pageContext.request.userPrincipal.name != null}">
 <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
@@ -89,19 +242,31 @@
 </c:if>
 <a>Hello, ${pageContext.request.userPrincipal.name}</a>
 <a href="<c:url value="/j_spring_security_logout" />">Sign Out</a>
-</c:if>				<ul>
-				   <li class='active'><a href="index.html">Home</a></li>
-				   <li><a href="#">Cars</a></li>
-				   <li><a href="single.html">About</a></li>
-				   <li><a href="contact.html">Contact</a></li>
+</c:if>		
+<!-- admin function ends here -->
+
+
+
+
+
+
+<!-- home bars -->
+		<ul>
+				  <!--  <li class='active'><a href="">Home</a></li>
+				   <li><a href="GameStore">Games</a></li> -->
+				   <li><a href="about">About</a></li>
+				   <li><a href="contact">Contact</a></li>
 				   <li><a href="login1">login</a></li>
 				   <li><a href="register">register</a></li>
 				</ul>
 			</div>
+			
+			
+			
 			<a href="" class="logo">
 			
-			
-			<img alt="" src="<c:url value="/resources/images/logo.png" />"></img>
+	<h2><a href="Index"><span>E-</span>Games<span>S</span>tore</a></h2>		
+			<%-- <img alt="" src="<c:url value="/resources/images/sonic.jpg" />"></img> --%>
 			
 			
 			
@@ -109,7 +274,54 @@
 		</div>
 	</div>
 </header>
-<div class="slider">
+
+<!-- menu bar -->
+<div>			<ul id="menu">
+		<c:forEach items="${categoryList}" var="category">
+			<li><a href=${category.name}>${category.name}</a>
+				<ul>
+					<c:forEach items="${category.products}" var="product">
+
+						<li><a href="<c:url value='product/get/${product.id}' />">${product.name}</a></li>
+
+					</c:forEach>
+
+				</ul></li>
+		</c:forEach>
+
+	</ul>
+	<hr color="#2D88CF" size="5">
+	
+	<div>
+		<c:if test="${!empty selectedProduct.name}">
+			<table>
+				<tr>
+					<th align="left" width="100">Product ID</th>
+					<th align="left" width="150">Product Name</th>
+					<th align="left" width="230">Product Description</th>
+					<th align="left" width="80">Price</th>
+					<th align="left" width="200">Product Category</th>
+					<th align="left" width="200">Product Supplier</th>
+					
+				</tr>
+				<tr>
+					<td align="left" >${selectedProduct.id}</td>
+					<td align="left" >${selectedProduct.name}</td>
+					<td align="left" >${selectedProduct.description}</td>
+					<td align="left" >${selectedProduct.price}</td>
+					<td align="left" >${selectedProduct.category.name}</td>
+					<td align="left" >${selectedProduct.supplier.name}</td>
+				</tr>
+			</table>
+		</c:if>
+	</div>
+	
+						
+	</div>		
+	
+	
+	
+	<div class="slider">
 	<!-- Slideshow -->
 	<div class="callbacks_container">
 		<ul class="rslides" id="slider">
@@ -118,15 +330,15 @@
 			
 				
 				<div class="caption">
-					<h1>THUNDERSPEED</h1>
-					<span >MAKE IT UNIQUE, MAKE IT YOURS</span>
+					<h1>E Games Store</h1>
+					<span >DISCOVER THE ADVENTURES WITHIN YOU</span>
 				</div>
 			</li>
 			<li>
 			<img alt="" src="<c:url value="/resources/images/slideshow-image2.jpg" />"></img>
 				
 				<div class="caption">
-					<h1>THUNDERSPEED</h1>
+					<h1>E Games Store</h1>
 					<span >ENJOY THE THRILL</span>
 				</div>
 			</li>
@@ -134,8 +346,8 @@
 			<img alt="" src="<c:url value="/resources/images/slideshow-image3.jpg" />"></img>
 				
 				<div class="caption">
-					<h1>THUNDERSPEED</h1>
-					<span >THE POWER AND THE BEAUTY</span>
+					<h1>E Games Store</h1>
+					<span >EXCEED THE LIMITS</span>
 				</div>
 			</li>
 		</ul>
@@ -204,6 +416,13 @@
 	</div>
 </div>
  -->
+ 
+ <!-- For fetching the products -->
+ <%@include file="/WEB-INF/views/FetchProducts.jsp"%>
+ 
+ 
+ 
+ 
 <!--////////////////////////////////////Container-->
 <section id="container">
 	<div class="wrap-container clearfix">
@@ -211,28 +430,27 @@
 			<div class="wrap-box"><!--Start Box-->
 				<div class="zerogrid">
 					<div class="header">
-						<h2>FEATURED CARS</h2>
+						<h2>VIDEO GAMES STORE</h2>
 					</div>	
 					<div class="row">
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="item t-center">
 									<div class="item-container">
-										<a href="single.html">
+										<a href="Pcgaming">
 											<div class="item-caption">
 												<div class="item-caption-inner">
 													<div class="item-caption-inner1">
-														<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span>
+														<!-- <span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span> -->
 													</div>
 												</div>
 											</div>
-											<img alt="" src="<c:url value="/resources/images/car1.jpg" />"></img>
-											
-										</a>
+											<img alt="" src="<c:url value="/resources/images/mafia.jpg" />"></img>
+												</a>
 									</div>
 									<div class="item-info">
-										<a href="single.html"><h3>LAMBORGHINI MIURA</h3></a>
-										<p>THE ULTIMATE SPORTS CAR</p>
+										<a href="Pcgaming"><h3>PC GAMING STORE</h3></a>
+										
 									</div>
 								</div>
 								<div class="item t-center">
@@ -241,59 +459,17 @@
 											<div class="item-caption">
 												<div class="item-caption-inner">
 													<div class="item-caption-inner1">
-														<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span>
+														<!-- <span></span> -->
 													</div>
 												</div>
 											</div>
-											<img alt="" src="<c:url value="/resources/images/car5.jpg" />"></img>
+											<img alt="" src="<c:url value="/resources/images/play4.jpg" />"></img>
 											
 										</a>
 									</div>
 									<div class="item-info">
-										<a href="single.html"><h3>LAMBORGHINI COUNTACH</h3></a>
-										<p>A STUNNING DESIGN</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="item t-center">
-									<div class="item-container">
-										<a href="single.html">
-											<div class="item-caption">
-												<div class="item-caption-inner">
-													<div class="item-caption-inner1">
-														<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span>
-													</div>
-												</div>
-											</div>
-											<img alt="" src="<c:url value="/resources/images/car2.jpg" />"></img>
-											
-										</a>
-									</div>
-									<div class="item-info">
-										<a href="single.html"><h3>LAMBORGHINI DIABLO</h3></a>
-										<p>THE SUPER CAR OF THE FUTURE</p>
-									</div>
-								</div>
-								<div class="item t-center">
-									<div class="item-container">
-										<a href="single.html">
-											<div class="item-caption">
-												<div class="item-caption-inner">
-													<div class="item-caption-inner1">
-														<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span>
-													</div>
-												</div>
-											</div>
-											<img alt="" src="<c:url value="/resources/images/car4.jpg" />"></img>
-											
-										</a>
-									</div>
-									<div class="item-info">
-										<a href="single.html"><h3>LAMBORGHINI GALLARDO</h3></a>
-										<p>32,000 km €78,400</p>
+										<a href="single.html"><h3>PLAYSTATION 4 STORE</h3></a>
+										
 									</div>
 								</div>
 							</div>
@@ -306,17 +482,17 @@
 											<div class="item-caption">
 												<div class="item-caption-inner">
 													<div class="item-caption-inner1">
-														<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span>
+														<!-- <span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span> -->
 													</div>
 												</div>
 											</div>
-											<img alt="" src="<c:url value="/resources/images/car3.jpg" />"></img>
+											<img alt="" src="<c:url value="/resources/images/xbox12.jpg" />"></img>
 											
 										</a>
 									</div>
 									<div class="item-info">
-										<a href="single.html"><h3>LAMBORGHINI GALLARDO</h3></a>
-										<p>32,000 km €78,400</p>
+										<a href="single.html"><h3>XBOX ONE STORE</h3></a>
+								
 									</div>
 								</div>
 								<div class="item t-center">
@@ -325,17 +501,58 @@
 											<div class="item-caption">
 												<div class="item-caption-inner">
 													<div class="item-caption-inner1">
-														<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span>
+														<!-- <span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span> -->
 													</div>
 												</div>
 											</div>
-											<img alt="" src="<c:url value="/resources/images/car1.jpg" />"></img>
+											<img alt="" src="<c:url value="/resources/images/xbox360.jpg" />"></img>
 											
 										</a>
 									</div>
 									<div class="item-info">
-										<a href="single.html"><h3>LAMBORGHINI GALLARDO</h3></a>
-										<p>32,000 km €78,400</p>
+										<a href="single.html"><h3>XBOX 360 STORE</h3></a>
+									
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="item t-center">
+									<div class="item-container">
+										<a href="single.html">
+											<div class="item-caption">
+												<div class="item-caption-inner">
+													<div class="item-caption-inner1">
+														<!-- <span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span> -->
+													</div>
+												</div>
+											</div>
+											<img alt="" src="<c:url value="/resources/images/play3.jpg" />"></img>
+											
+										</a>
+									</div>
+									<div class="item-info">
+										<a href="single.html"><h3>PLAYSTATION 3 STORE</h3></a>
+										
+									</div>
+								</div>
+								<div class="item t-center">
+									<div class="item-container">
+										<a href="single.html">
+											<div class="item-caption">
+												<div class="item-caption-inner">
+													<div class="item-caption-inner1">
+														<!-- <span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span> -->
+													</div>
+												</div>
+											</div>
+											<img alt="" src="<c:url value="/resources/images/psp.jpg" />"></img>
+										</a>
+									</div>
+									<div class="item-info">
+										<a href="single.html"><h3>PSP</h3></a>
+										
 									</div>
 								</div>
 							</div>
@@ -343,19 +560,20 @@
 					</div>
 				</div>
 			</div>
-			<div class="wrap-box t-center" style="background: #fff; box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);"><!--Start Box-->
+			<div class="wrap-box t-center" style="background: #fff; box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);">
+			<!--Start Box-->
 				<div class="zerogrid">
 					<div class="header">
 						<h2>WELCOME TO THUNDERSPEED</h2>
 					</div>
 					<strong>IF IT MATTERS TO YOU, IT'S EVERYTHING TO US</strong>
-					<p>It is a website designed for special edition lamborghini cars for those who loves to be unique and special in their own way</p>
+					<p>It is a Website designed for special edition games for those who love to play and crazy about games.</p>
 				</div>
 			</div>
 			<div class="wrap-box" ><!--Start Box-->
 				<div class="zerogrid">
 					<div class="header">
-						<h2>LATEST CARS</h2>
+						<h2>NEW RELEASES  </h2>
 					</div>
 					<div class="row">
 						<div class="col-2-3">
@@ -368,11 +586,11 @@
 													<div class="item-caption">
 														<div class="item-caption-inner">
 															<div class="item-caption-inner1">
-																<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span>
+															<!-- 	<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span> -->
 															</div>
 														</div>
 													</div>
-													<img alt="" src="<c:url value="/resources/images/car7.jpg" />"></img>
+													<img alt="" src="<c:url value="/resources/images/darksouls.jpg" />"></img>
 													
 												</a>
 											</div>
@@ -380,9 +598,9 @@
 										<div class="col-2-3">
 											<div class="wrap-col">
 												<div class="item-info">
-													<a href="single.html"><h3>LAMBORGHINI GALLARDO</h3></a>
-													<p>32,000 km €78,400</p>
-													<p>ABS, Leather seats, Power Assisted Steering, Electric heated seats, New HU and AU, Xenon headlights</p>
+													<a href="single.html"><h3>DARK SOULS 3</h3></a>
+													<p>Rs.2698.00</p>
+													<p>Dark Souls III As fires fade and the world falls into ruin. </p>
 												</div>
 											</div>
 										</div>
@@ -397,11 +615,11 @@
 													<div class="item-caption">
 														<div class="item-caption-inner">
 															<div class="item-caption-inner1">
-																<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span>
+													<!-- 			<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span> -->
 															</div>
 														</div>
 													</div>
-													<img alt="" src="<c:url value="/resources/images/car8.jpg" />"></img>
+													<img alt="" src="<c:url value="/resources/images/rocket.jpg" />"></img>
 													
 												</a>
 											</div>
@@ -409,16 +627,16 @@
 										<div class="col-2-3">
 											<div class="wrap-col">
 												<div class="item-info">
-													<a href="single.html"><h3>LAMBORGHINI GALLARDO</h3></a>
-													<p>32,000 km €78,400</p>
-													<p>ABS, Leather seats, Power Assisted Steering, Electric heated seats, New HU and AU, Xenon headlights</p>
+													<a href="single.html"><h3>Rocket League: Collector Edition</h3></a>
+													<p>Rs.1999</p>
+													<p>Take control of your own high-flying, hard-hitting, rocket-powered Battle-Car in the critically-acclaimed, futuristic Sports-Action hit</p>
 												</div>
 											</div>
 										</div>
 										<div class="clear"></div>
 									</div>
 								</div>
-								<div class="row">
+						<%-- 		<div class="row">
 									<div class="item">
 										<div class="col-1-3">
 											<div class="item-container">
@@ -426,7 +644,7 @@
 													<div class="item-caption">
 														<div class="item-caption-inner">
 															<div class="item-caption-inner1">
-																<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span>
+																<!-- <span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span> -->
 															</div>
 														</div>
 													</div>
@@ -447,7 +665,7 @@
 										<div class="clear"></div>
 									</div>
 								</div>
-								<div class="row">
+						 --%>		<%-- <div class="row">
 									<div class="item">
 										<div class="col-1-3">
 											<div class="item-container">
@@ -455,7 +673,7 @@
 													<div class="item-caption">
 														<div class="item-caption-inner">
 															<div class="item-caption-inner1">
-																<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span>
+																<!-- <span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span> -->
 															</div>
 														</div>
 													</div>
@@ -476,7 +694,7 @@
 										<div class="clear"></div>
 									</div>
 								</div>
-								<div class="row">
+							 --%>	<div class="row">
 									<div class="item">
 										<div class="col-1-3">
 											<div class="item-container">
@@ -484,11 +702,11 @@
 													<div class="item-caption">
 														<div class="item-caption-inner">
 															<div class="item-caption-inner1">
-																<span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span>
+																<!-- <span>2006 / 32,000 km / 250 HP / petrol / automatic /  Sports car/Coupe / Beige</span> -->
 															</div>
 														</div>
 													</div>
-													<img alt="" src="<c:url value="/resources/images/car7.jpg" />"></img>
+													<img alt="" src="<c:url value="/resources/images/battle.jpg" />"></img>
 													
 												</a>
 											</div>
@@ -496,9 +714,9 @@
 										<div class="col-2-3">
 											<div class="wrap-col">
 												<div class="item-info">
-													<a href="single.html"><h3>LAMBORGHINI GALLARDO</h3></a>
-													<p>32,000 km €78,400</p>
-													<p>ABS, Leather seats, Power Assisted Steering, Electric heated seats, New HU and AU, Xenon headlights</p>
+													<a href="single.html"><h3>BATTLEBORN</h3></a>
+													<p>Rs.497</p>
+													<p>Battleborn is a next-gen hero-shooter brought to you by the creators of the award-winning and best-selling Borderlands franchise.</p>
 												</div>
 											</div>
 										</div>
@@ -515,12 +733,12 @@
 										<h5>About Us</h5>
 									</div>
 									<div class="wid-content">
-										<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. </p>
-										<a href="#">Read More About Us</a>
+										<p>It is still "Day 1" and we continue to relentlessly focus on using our investments in technology and innovation to transform the lives of our customers and all our partners. We strive to transform the way India shops and the way India sells.</p>
+										<a href="about">Read More About Us</a>
 									</div>
 								</div>
 								<!---- Start Widget ---->
-								<div class="widget wid-post">
+							<%-- 	<div class="widget wid-post">
 									<div class="wid-header">
 										<h5>Latest Posts</h5>
 									</div>
@@ -561,15 +779,15 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> --%>
 								<!---- Start Widget ---->
 								<div class="widget">
 									<div class="wid-header">
 										<h5>SUBSCRIBE</h5>
 									</div>
 									<div class="wid-content">
-										<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure . </p>
-										<a href="#" class="button bt1">Subscribe</a>
+										<p>For more updates about the  click below to subscribe </p>
+										<a href="#"  class="button bt1">Subscribe</a>
 									</div>
 								</div>
 							</div>

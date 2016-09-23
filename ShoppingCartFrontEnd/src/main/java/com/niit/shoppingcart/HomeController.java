@@ -1,36 +1,104 @@
 package com.niit.shoppingcart;
 
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.niit.shopingcart.dao.CategoryDAO;
+import com.niit.shopingcart.dao.ProductDAO;
+import com.niit.shopingcart.model.Category;
+import com.niit.shopingcart.model.Product;
 
 @Controller
 public class HomeController {
 
+@Autowired
+	
+	private CategoryDAO categoryDAO;
+	@Autowired                       //include frm here
+	private Category category;
+@Autowired
+	
+	private ProductDAO productDAO;
+	
+	
+	
+	
+	
 	//if you want to navigate
+
 	
 	
-	@RequestMapping("/")
-	public String Home()
-	{
-		return "Index";
+
+@RequestMapping("/")
+public String homepage(HttpSession session ,Model model,@ModelAttribute("selectedProduct")Product selectedProduct)
+{
+	//model.addAttribute("category", category);
+	
+	session.setAttribute("categoryList", categoryDAO.list());///till here
+	session.setAttribute("productList", this.productDAO.list());
+	
+	model.addAttribute("categoryList", this.categoryDAO.list());///till here
+
+	//ModelAndView model=new ModelAndView("/INDEX");
+	if(selectedProduct!=null)
+		model.addAttribute("selectedProduct", selectedProduct);
+	else
+	System.out.println("The object is null");
+
+	
+	
+	return "Index";
+}
+
+/*
+
+
+@RequestMapping("/")
+public ModelAndView getPage(HttpSession session, @ModelAttribute("selectedProduct") final Product selectedProduct) {
+
+	ModelAndView model=new ModelAndView("/Index");
+	
+	model.addObject("categoryList", categoryDAO.list());
+	model.addObject("productList", productDAO.list());
+	
+	session.setAttribute("categoryList", categoryDAO.list());
+	session.setAttribute("productList", productDAO.list());
+	
+	System.out.println("inside / mapping");
+
+	if(selectedProduct!=null){
+		System.out.println("Inside selected product not null");
+		model.addObject("selectedProduct",selectedProduct);
 	}
-/*	@RequestMapping("/admin")
-	public String getadmin()
-	{
-		return"adminPage";
-	}
-*/	@RequestMapping("/Index")
+	else
+		System.out.println("The object is null");
+	
+	return model;
+	
+}
+*/
+
+
+/* redirect pages*/
+
+@RequestMapping("/Index")
 	public String reg()
 	{
 		return "Index";
 	}
-/*
-	@RequestMapping("/login")
-	public String login()
-	{
-		return "Login";
-	}
-*/	
+
+@RequestMapping("/contact")
+public String cont()
+{
+	return "Contact";
+}
+
 	 
 	@RequestMapping("/single.html")
 	public String asdfghjk()
@@ -38,51 +106,29 @@ public class HomeController {
 		return "Single";
 	}
 	
-	@RequestMapping("/contact")
-	public String asdfghjk1()
-	{
-		return "Single";
-	}
 	
 	@RequestMapping("/LoginPage")
 	public String asdfgh1()
 	{
 		return "LoginPage";
 	}
+	
 
-	/*
-	@RequestMapping("/RegisterPage")
-	public String asdfgh12()
+	@RequestMapping("/about")
+	public String aaaq()
 	{
-		return "RegisterPage";
+		return "AboutPage";
 	}
-*/
+
+	//for the e store pages
+	
+
+@RequestMapping("/Pcgaming")
+	public String reg12()
+	{
+		return "Pcg";
+	}
+
 	
 }
-	/*
-	@RequestMapping("/")
-	public ModelAndView home()
-	{
-		ModelAndView mv = new ModelAndView("/Home");
-		mv.addObject("message","thank you for visiting");
-		return mv;
-	}
 	
-	@RequestMapping("/Register")
-	public ModelAndView register()
-	{
-		ModelAndView mv = new ModelAndView("Register");
-		mv.addObject("user click register here", "true");
-		return mv;
-	}
-	
-	@RequestMapping("/Login")
-	public ModelAndView login()
-	{
-	
-		ModelAndView mv = new ModelAndView("Login");
-		mv.addObject("user click login here", "true");
-		return mv;
-	}
-}
-*/

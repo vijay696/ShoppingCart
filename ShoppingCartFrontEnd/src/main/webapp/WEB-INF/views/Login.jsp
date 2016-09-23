@@ -25,12 +25,12 @@
   
   
   
-  	<link  href="<c:url value="resources/css/zerogrid.css"/>" rel="stylesheet">
-	<link  href="<c:url value="resources/css/style.css"/>" rel="stylesheet">
+  	<link  href="<c:url value="/resources/css/zerogrid.css"/>" rel="stylesheet">
+	<link  href="<c:url value="/resources/css/style.css"/>" rel="stylesheet">
     
     
-    <script src="<c:url value="resources/js/jquery-latest.min.js"/>"> </script>
-	<script src="<c:url value="resources/js/script.js"/>"> </script>
+    <script src="<c:url value="/resources/js/jquery-latest.min.js"/>"> </script>
+	<script src="<c:url value="/resources/js/script.js"/>"> </script>
 	
 	
 	<!--[if lt IE 8]>
@@ -55,7 +55,7 @@
 		<div class="row">
 			<div id="cssmenu">
 				<ul>
-				   <li class='active'><a href="index.html">Home</a></li>
+				   <li class='active'><a href="Index">Home</a></li>
 				   <li><a href="#">Cars</a></li>
 				   <li><a href="single.html">About</a></li>
 				   <li><a href="contact.html">Contact</a></li>
@@ -63,7 +63,7 @@
 			</div>
 			<a href="" class="logo">
 			
-			<img alt="" src="<c:url value="/resources/images/logo.png" />"></img>
+			<img alt="" src="<c:url value="/resources/images/sonic.jpg" />"></img>
 			
 			
 			
@@ -116,7 +116,7 @@
 											</label>
 											<label class="row">
 												<div class="wrap-col">
-													<input type="text" name="password" id="password" placeholder="password" required="required" />
+													<input type="password" name="password" id="password" placeholder="password" required="required" />
 												</div>
 											</label>
 											
@@ -174,11 +174,11 @@
 		<div class="wrap-footer">
 			<div class="row">
 				<h3>Contact</h3>
-				<span>Phone / +80 999 99 9999 </span></br>
-				<span>Email / info@domain.com  </span></br>
-				<span>Studio / Moonshine St. 14/05 Light City </span></br>
+	<span>Phone / +91 8892754990</span></br>
+				<span>Email / vijay.gr11@gmail.com  </span></br>
+				<!-- <span>Studio / Moonshine St. 14/05 Light City </span></br>
 				<span><strong>Copyright 20xx - <a href="http://www.zerotheme.com" rel="nofollow" target="_blank">Html5 Templates</a> Designed by <a href="http://www.zerotheme.com" rel="nofollow" target="_blank">ZEROTHEME</a></strong></span>
-			</div>
+			</di -->		</div>
 		</div>
 	</div>
 </footer>

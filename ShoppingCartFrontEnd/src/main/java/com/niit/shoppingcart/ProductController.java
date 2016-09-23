@@ -1,6 +1,8 @@
 package com.niit.shoppingcart;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.niit.shopingcart.dao.CategoryDAO;
 import com.niit.shopingcart.dao.ProductDAO;
@@ -80,27 +83,29 @@ public class ProductController {
 		
 		String newID=Util.removeComma(product.getId());
 		product.setId(newID);
-				productDAO.saveOrUpdate(product);
+			
 
-		        MultipartFile itemImage = product.getItemImage();
-		        String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-		        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+product.getId()+".png");
-
-
-		        if (itemImage != null && !itemImage.isEmpty()) {
-		            try {
-		            itemImage.transferTo(new File(path.toString()));
-		            } catch (Exception e) {
-		                e.printStackTrace();
-		                throw new RuntimeException("item image saving failed.", e);
-		            }
-		        }
+		productDAO.saveOrUpdate(product);
+		   MultipartFile itemImage = product.getItemImage();
+	       String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+product.getId()+".png");
+//  path = Paths.get("E:\\workspace2\\ShoppingCartFrontEnd\\src\\main\\webapp\\WEB-INF\\resources\\images"+product.getId()+".png");
+	        
 
 
-		return "redirect:/manageProduct";
+	        if (itemImage != null && !itemImage.isEmpty()) {
+	            try {
+	            itemImage.transferTo(new File(path.toString()));
+	            } catch (Exception e) {
+	                e.printStackTrace();
+	                throw new RuntimeException("item image saving failed.", e);
+	            }
+	        }
 
-	}
 
+	return "redirect:/manageProduct";
+
+}
 	@RequestMapping("manageProduct/remove/{id}")
 	public String removeProduct(@PathVariable("id") String id, ModelMap model) throws Exception {
 
@@ -113,6 +118,31 @@ public class ProductController {
 		}
 		// redirectAttrs.addFlashAttribute(arg0, arg1)
 		return "redirect:/manageProduct";
+/*
+		try {
+			productDAO.delete(id);
+			model.addAttribute("message", "Successfully deleted");
+		} catch (Exception e) {
+			model.addAttribute("message", e.getMessage());
+			e.printStackTrace();
+		}
+		
+		
+		path = Paths.get("D:\\DT softwares\\New folder\\WORKSPACE\\ShoppingCartFrontEnd\\src\\main\\webapp\\WEB-IN\\resources\\images\\" + id + ".png");
+		
+		if (Files.exists(path)) {
+            try {
+                Files.delete(path);
+                System.out.println("Image successfully deleted");
+            } catch (IOException e) {
+            	  System.out.println("Error in Image deletion");
+                e.printStackTrace();
+            }
+        }
+		// redirectAttrs.addFlashAttribute(arg0, arg1)
+		return "redirect:/manageProduct";
+*/		
+	
 	}
 
 	@RequestMapping("manageProduct/edit/{id}")
@@ -130,5 +160,18 @@ public class ProductController {
 
 	}
 
+	@RequestMapping("product/get/{id}")
+	public String getSelectedProduct(@PathVariable("id") String id, Model model,RedirectAttributes redirectattributes) {
+		System.out.println("getSelectedProduct");
+		/*model.addAttribute("selectedProduct", this.productDAO.get(id));*/
+		model.addAttribute("categoryList", this.categoryDAO.list());
+		model.addAttribute("productList", this.productDAO.list());
+		redirectattributes.addFlashAttribute("selectedProduct", this.productDAO.get(id));
+	
+		return "redirect:/";
+	
+	}
 
+	
+	
 }
