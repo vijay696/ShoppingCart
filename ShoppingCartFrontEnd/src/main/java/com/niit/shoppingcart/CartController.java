@@ -2,7 +2,6 @@ package com.niit.shoppingcart;
 
 
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -41,10 +40,35 @@ public class CartController {
 	
 		model.addAttribute("cart", new Cart());
 		model.addAttribute("cartList", this.cartDAO.list());
-		model.addAttribute("totalAmount", cartDAO.getTotalAmount("user")); // Just to test, passwrdo user
+		
+		model.addAttribute("sum", cartDAO.getTotalAmount("user")); // Just to test, passwrdo user
 		model.addAttribute("displayCart", "true");
 		return "Cart";
 	}
+	@RequestMapping("/Buy/{name}")
+	public String myCart1(Model model, @PathVariable("name") String name) {
+		
+		Product product =productDAO.getByName(name);
+		model.addAttribute("product", product);
+		//model.addAttribute("categoryList", categoryDAO.list());
+	
+		//model.addAttribute("cart", new Cart());
+		//model.addAttribute("cartList", this.cartDAO.list());
+		model.addAttribute("sum", product.getPrice()); // Just to test, passwrdo user
+		//model.addAttribute("displayCart", "true");
+		return "Buy";
+	}
+	
+	@RequestMapping("/Thankyou")
+	public String loadLoginPage4() {
+		return "Thankyou";
+	}
+	@RequestMapping("/Tk")
+	public String loadLoginPage5() {
+		return "Tk";
+	}
+	
+	
 	
 	
 	/*@RequestMapping(value = "/carts", method = RequestMethod.GET)
@@ -76,44 +100,19 @@ public class CartController {
 		return "redirect:/myCart";
 	}
 	
-	@RequestMapping("/cart/remove/{id}")
+	@RequestMapping("cart/remove/{id}")
     public String removeCart(@PathVariable("id") Integer id,ModelMap model) throws Exception{
 		
-       System.out.println("cart delete function");
-		cartDAO.delete(id);
-		
+       cartDAO.delete(id);
+       //redirectAttrs.addFlashAttribute(arg0, arg1)
         return "redirect:/myCart";
     }
-	
-	
-	
-	
  
     @RequestMapping("cart/edit/{id}")
     public String editCart(@PathVariable("id") int id, Model model){
     	System.out.println("editCart");
         model.addAttribute("cart", this.cartDAO.get(id));
         model.addAttribute("listCarts", this.cartDAO.list());
-        return "Cart";
+        return "cart";
     }
-    
-    
-    
-    
-    
-
-@RequestMapping("/buyproduct")
-public String cont1()
-{
-	return "BuyProduct";
-}
-
-/*
-@RequestMapping("/addToCart")
-public String cont12()
-{
-	return "redirect:/myCart";
-}
-*/
-
 	}

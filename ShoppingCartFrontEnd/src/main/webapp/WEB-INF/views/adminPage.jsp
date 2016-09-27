@@ -59,7 +59,7 @@
 				   <li><a href="manageSupplier">Manage Supplier</a></li>
 				</ul>
 			</div>
-			<a href="" class="logo">
+			<a href="Index" class="logo">
 			
 			<img alt="" src="<c:url value="/resources/images/sonic.jpg" />"></img>
 			

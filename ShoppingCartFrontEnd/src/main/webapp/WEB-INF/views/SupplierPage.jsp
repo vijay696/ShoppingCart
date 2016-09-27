@@ -80,6 +80,7 @@
 .tg .tg-4eph {
 	background-color: #f9f9f9
 }
+
 </style>
     
 </head>
@@ -98,7 +99,7 @@
 				   <li><a href="manageSupplier">Manage Supplier</a></li>
 				</ul>
 			</div>
-			<a href="" class="logo">
+			<a href="Index" class="logo">
 			
 			<img alt="" src="<c:url value="/resources/images/sonic.jpg" />"></img>
 			
@@ -145,10 +146,10 @@
 			</tr>
 			<tr>
 				<td colspan="2"><c:if test="${!empty supplier.name}">
-						<input type="submit"
-							value="<spring:message text="Edit Supplier"/>" />
+					<center>	<input class="btn btn-xl" type="submit"
+							value="<spring:message text="Edit Supplier"/>" /></center>
 					</c:if> <c:if test="${empty supplier.name}">
-						<input type="submit" value="<spring:message text="Add Supplier"/>" />
+			<center>	<input class="btn btn-xl" type="submit" value="<spring:message text="Add Supplier"/>" /></center>		
 					</c:if></td>
 			</tr>
 		</table>

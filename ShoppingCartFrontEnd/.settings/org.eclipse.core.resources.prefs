@@ -1,5 +1,10 @@
 eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/views/AboutPage.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/FetchProducts.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/Index.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/Pcg.jsp=UTF-8
-encoding//src/main/webapp/WEB-INF/views/Single.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/Playstation3.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/Playstation4.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/Psp.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/Xbox1.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/Xbox360.jsp=UTF-8

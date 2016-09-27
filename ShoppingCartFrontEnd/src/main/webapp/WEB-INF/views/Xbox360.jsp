@@ -96,7 +96,7 @@
 	</div>
 </header>
 <br>
-<center><h1>PC Gaming</h1></center>
+<center><h1>XBOX 360</h1></center>
 
 <br>
 <!--////////////////////////////////////Container-->
@@ -108,8 +108,8 @@
 				<!--Start Box-->
 					<div class="zerogrid">
 						<div class="header">
-							<h1>Mafia-3</h1>
-							<h5>Platform: Windows</h5>
+							<h1>Rise of the Tomb Raider</h1>
+							<h5>Platform: Xbox 360</h5>
 						</div>	
 						<!-- Start of the Product description -->
 						<div class="row">
@@ -120,7 +120,7 @@
 										<div class="callbacks_container">
 				<!-- 							<ul class="rslides" id="slider"> -->
 																								
-												<img alt="" src="<c:url value="/resources/images/mafia.jpg" />"></img>
+												<img alt="" src="<c:url value="/resources/images/Tomb.jpg" />"></img>
 												
 													
 												
@@ -142,12 +142,7 @@
 									<div class="info">
 										<h2 class="h3">Product Description</h2>
 										
-										<p>It's 1968 and the rules have changed.   After years in Vietnam, Lincoln Clay knows this truth: Family isn't who you're born with, it's who you die for.   Now back home, in a reimagined New Orleans, Lincoln is set on rebuilding his life, but old ties 
-										keep him from leaving the city.   It will take more than a few friends to make it in this new world.  
-										 Intense gun fights, visceral hand-to-hand combat, white knuckle driving and street smarts will all be needed. 
-										 But with the right crew, tough decisions and some dirty hands, it's possible to make it to the top of the city's underworld.
-										  It's time to create a new family.  
-
+										<p>After uncovering an ancient mystery, Lara must explore the most treacherous and remote regions of Siberia to find the secret of immortality before a ruthless organization known as Trinity. Lara must use her wits and survival skills, form new alliances, and ultimately embrace her destiny as the Tomb Raider. Experience high-octane action moments, conquer beautifully hostile environments, engage in brutal guerilla combat, and explore awe-inspiring deadly tombs in the evolution of survival action. In “Rise of the Tomb Raider,” Lara becomes more than a survivor as she embarks on her first Tomb Raiding expedition. 
 										
 										</p>
 									</div><!-- /.post -->
@@ -155,10 +150,10 @@
 									<div class="info">
 										<h2 class="h3">Product Details</h2>
 										
-										<p>ASIN: B01F1WY41C</p>
+										<p>ASIN: D01E1WY41C</p>
 										
-<p>Release Date: 7 October 2016 </p> 
-	<p>Type: Action</p>
+<p>Release Date: 7 August 2016 </p> 
+	<p>Type: Action & Adventure</p>
 									</div><!-- /.post -->
 								</div>
 							</div>
@@ -170,14 +165,14 @@
 								<center>		<h3>Game Information</h3>
 										
           <p>Game Information</p>
-          <p>Platform:   Windows</p>
+          <p>Platform:   Xbox 360</p>
            
-       <p>Media: DVD-ROM</p>
+       <p>Media: Video Game</p>
 									</div></center>	
 									</div>
 								</div>
 							</div>
-								</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -199,8 +194,8 @@
 				<!--Start Box-->
 					<div class="zerogrid">
 						<div class="header">
-							<h1>Dishonored 2</h1>
-							<h5>Platform: Windows</h5>
+							<h1>Need For Speed: Rivals</h1>
+							<h5>Platform: Xbox 360</h5>
 						</div>	
 						<!-- Start of the Product description -->
 						<div class="row">
@@ -211,7 +206,7 @@
 										<div class="callbacks_container">
 				<!-- 							<ul class="rslides" id="slider"> -->
 																								
-												<img alt="" src="<c:url value="/resources/images/dishonored.jpg" />"></img>
+												<img alt="" src="<c:url value="/resources/images/need.jpg" />"></img>
 												
 													
 												
@@ -255,22 +250,18 @@
 									<div class="info">
 										<h2 class="h3">Product Description</h2>
 										
-										<p>Reprise your role as a supernatural assassin in Dishonored 2, the highly anticipated follow up to Arkane Studios 2012 Game of the Year! 
-Explore a world unlike any other as either Emily Kaldwin or Corvo Attano - both powerful assassins with their own unique set of supernatural abilities, weapons and unusual gadgets. Define your own playstyle by blending immersive first-person action,
- assassination, stealth, mobility and the game's brutal combat system. 
-Combine the tools at your disposal to creatively eliminate your enemies whether you choose to pursue them unseen or ruthlessly attack head on with weapons drawn. 
-Show no mercy and leave chaos in your wake or find a more subtle way to eliminate your targets. More than ever the choices you make will determine the outcome of each mission and ultimately the game.
-										
+										<p>Five Ways to Play: Need for Speed returns with Five Ways to Play - Speed, Style, Build, Crew and Outlaw, enabling you to earn reputation and ultimately win your way, combine all five to create that perfect Need for Speed moment: driving insanely fast, sliding through a corner in your customized ride alongside your friends, whilst being chased by the cops
+Rich Authentic Customization: Build a car that reflects your character through extensive visual and performance customization, with hand-picked iconic cars, the hottest authentic after-market brands, performance tuning, and personalized handling,set up your ride and hit the street
 										</p>
 									</div><!-- /.post -->
 
 									<div class="info">
 										<h2 class="h3">Product Details</h2>
 										
-										<p>ASIN: B01GA43S7Q</p>
+										<p>ASIN: B01GA9658S7Q</p>
 										
-<p>Release Date: 11 November 2015 </p>
-<p>Type: Adventure</p> 
+<p>Release Date: 25 November 2015 </p>
+<p>Type: Action</p> 
 									</div><!-- /.post -->
 								</div>
 							</div>
@@ -282,9 +273,9 @@ Show no mercy and leave chaos in your wake or find a more subtle way to eliminat
 								<center>		<h3>Game Information</h3>
 										
           <p>Game Information</p>
-          <p>Platform:   Windows</p>
+          <p>Platform:   Xbox 360</p>
            
-       <p>Media: DVD-ROM</p>
+       <p>Media: Video Game</p>
 									</div></center>	
 									</div>
 								</div>

@@ -56,12 +56,12 @@
 			<div id="cssmenu">
 				<ul>
 				   <li class='active'><a href="Index">Home</a></li>
-				   <li><a href="#">Cars</a></li>
-				   <li><a href="single.html">About</a></li>
-				   <li><a href="contact.html">Contact</a></li>
+				     <li><a href="register">register</a></li>
+				   <li><a href="about">About</a></li>
+				   <li><a href="contact">Contact</a></li>
 				</ul>
 			</div>
-			<a href="" class="logo">
+			<a href="Index" class="logo">
 			
 			<img alt="" src="<c:url value="/resources/images/sonic.jpg" />"></img>
 			

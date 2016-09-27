@@ -234,11 +234,11 @@ color:blue
 			
   <c:if test="${pageContext.request.userPrincipal.name != null}">
 <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
-<a href="<c:url value="/" />">Cart</a>
+<a href="<c:url value="/myCart" />">Cart</a>
 </c:if>
 <c:if test="${pageContext.request.userPrincipal.name  == 'admin'}">
 <a href="<c:url value="/admin" />">View Inventory</a>
-<a href="<c:url value="/" />">View Customer</a>
+<%-- <a href="<c:url value="/" />">View Customer</a> --%>
 </c:if>
 <a>Hello, ${pageContext.request.userPrincipal.name}</a>
 <a href="<c:url value="/j_spring_security_logout" />">Sign Out</a>
@@ -263,7 +263,7 @@ color:blue
 			
 			
 			
-			<a href="" class="logo">
+			<a href="Index" class="logo">
 			
 	<h2><a href="Index"><span>E-</span>Games<span>S</span>tore</a></h2>		
 			<%-- <img alt="" src="<c:url value="/resources/images/sonic.jpg" />"></img> --%>
@@ -276,11 +276,21 @@ color:blue
 </header>
 
 <!-- menu bar -->
-<div>			<ul id="menu">
+<div>
+  <c:if test="${pageContext.request.userPrincipal.name != null}">
+	
+<%-- <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+ --%>
+		<ul id="menu">
 		<c:forEach items="${categoryList}" var="category">
+		
+		
+				
+		
 			<li><a href=${category.name}>${category.name}</a>
 				<ul>
 					<c:forEach items="${category.products}" var="product">
+
 
 						<li><a href="<c:url value='product/get/${product.id}' />">${product.name}</a></li>
 
@@ -290,9 +300,11 @@ color:blue
 		</c:forEach>
 
 	</ul>
+	</c:if><%-- </c:if> --%>
 	<hr color="#2D88CF" size="5">
+	<!--  -->
 	
-	<div>
+	
 		<c:if test="${!empty selectedProduct.name}">
 			<table>
 				<tr>
@@ -302,8 +314,7 @@ color:blue
 					<th align="left" width="80">Price</th>
 					<th align="left" width="200">Product Category</th>
 					<th align="left" width="200">Product Supplier</th>
-					
-				</tr>
+						</tr>
 				<tr>
 					<td align="left" >${selectedProduct.id}</td>
 					<td align="left" >${selectedProduct.name}</td>
@@ -311,14 +322,40 @@ color:blue
 					<td align="left" >${selectedProduct.price}</td>
 					<td align="left" >${selectedProduct.category.name}</td>
 					<td align="left" >${selectedProduct.supplier.name}</td>
+					
+					</tr>
+					</table>
+					<tr>
+					<td>
+                      	<img alt="" src="<c:url value="/resources/images/${selectedProduct.id}.png"/>" /> 
+                 		
+                </td>
+                <br>
+                <br>
+                		<td>	
+                		<c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+					<a class="btn btn-xl" href="<c:url value='myCart' />">Open Cart</a>
+				
+									
+					<a class="btn btn-xl" href="<c:url value='addToCart/${selectedProduct.id}' />">Add to Cart</a>
+ 
+											
+					<a class="btn btn-xl" href="<c:url value='Buy/${selectedProduct.name}' />">Buy</a>
+				</c:if>	
+        				</td>
+					<br>
+					<br>
+					<br>
+																
 				</tr>
-			</table>
-		</c:if>
+									
+					     	
+      </c:if>
 	</div>
 	
 						
 	</div>		
-	
+		
 	
 	
 	<div class="slider">
@@ -418,8 +455,9 @@ color:blue
  -->
  
  <!-- For fetching the products -->
- <%@include file="/WEB-INF/views/FetchProducts.jsp"%>
  
+ 
+ <%-- <%@include file="/WEB-INF/views/FetchProducts.jsp"%>  --%> 
  
  
  
@@ -455,7 +493,7 @@ color:blue
 								</div>
 								<div class="item t-center">
 									<div class="item-container">
-										<a href="single.html">
+										<a href="play4">
 											<div class="item-caption">
 												<div class="item-caption-inner">
 													<div class="item-caption-inner1">
@@ -468,7 +506,7 @@ color:blue
 										</a>
 									</div>
 									<div class="item-info">
-										<a href="single.html"><h3>PLAYSTATION 4 STORE</h3></a>
+										<a href="play4"><h3>PLAYSTATION 4 STORE</h3></a>
 										
 									</div>
 								</div>
@@ -478,7 +516,7 @@ color:blue
 							<div class="wrap-col">
 								<div class="item t-center">
 									<div class="item-container">
-										<a href="single.html">
+										<a href="xbox1">
 											<div class="item-caption">
 												<div class="item-caption-inner">
 													<div class="item-caption-inner1">
@@ -491,13 +529,13 @@ color:blue
 										</a>
 									</div>
 									<div class="item-info">
-										<a href="single.html"><h3>XBOX ONE STORE</h3></a>
+										<a href="xbox1"><h3>XBOX ONE STORE</h3></a>
 								
 									</div>
 								</div>
 								<div class="item t-center">
 									<div class="item-container">
-										<a href="single.html">
+										<a href="xbox360">
 											<div class="item-caption">
 												<div class="item-caption-inner">
 													<div class="item-caption-inner1">
@@ -510,7 +548,7 @@ color:blue
 										</a>
 									</div>
 									<div class="item-info">
-										<a href="single.html"><h3>XBOX 360 STORE</h3></a>
+										<a href="xbox360"><h3>XBOX 360 STORE</h3></a>
 									
 									</div>
 								</div>
@@ -520,7 +558,7 @@ color:blue
 							<div class="wrap-col">
 								<div class="item t-center">
 									<div class="item-container">
-										<a href="single.html">
+										<a href="play3">
 											<div class="item-caption">
 												<div class="item-caption-inner">
 													<div class="item-caption-inner1">
@@ -533,13 +571,13 @@ color:blue
 										</a>
 									</div>
 									<div class="item-info">
-										<a href="single.html"><h3>PLAYSTATION 3 STORE</h3></a>
+										<a href="play3"><h3>PLAYSTATION 3 STORE</h3></a>
 										
 									</div>
 								</div>
 								<div class="item t-center">
 									<div class="item-container">
-										<a href="single.html">
+										<a href="psp">
 											<div class="item-caption">
 												<div class="item-caption-inner">
 													<div class="item-caption-inner1">
@@ -551,7 +589,7 @@ color:blue
 										</a>
 									</div>
 									<div class="item-info">
-										<a href="single.html"><h3>PSP</h3></a>
+										<a href="psp"><h3>PSP</h3></a>
 										
 									</div>
 								</div>
@@ -564,7 +602,7 @@ color:blue
 			<!--Start Box-->
 				<div class="zerogrid">
 					<div class="header">
-						<h2>WELCOME TO THUNDERSPEED</h2>
+						<h2>WELCOME TO E-Games Store</h2>
 					</div>
 					<strong>IF IT MATTERS TO YOU, IT'S EVERYTHING TO US</strong>
 					<p>It is a Website designed for special edition games for those who love to play and crazy about games.</p>
@@ -582,7 +620,7 @@ color:blue
 									<div class="item">
 										<div class="col-1-3">
 											<div class="item-container">
-												<a href="single.html">
+												<!-- <a href="single.html"> -->
 													<div class="item-caption">
 														<div class="item-caption-inner">
 															<div class="item-caption-inner1">
@@ -598,8 +636,8 @@ color:blue
 										<div class="col-2-3">
 											<div class="wrap-col">
 												<div class="item-info">
-													<a href="single.html"><h3>DARK SOULS 3</h3></a>
-													<p>Rs.2698.00</p>
+													<h3>DARK SOULS 3</h3>
+													
 													<p>Dark Souls III As fires fade and the world falls into ruin. </p>
 												</div>
 											</div>
@@ -611,7 +649,7 @@ color:blue
 									<div class="item">
 										<div class="col-1-3">
 											<div class="item-container">
-												<a href="single.html">
+												<!-- <a href="single.html"> -->
 													<div class="item-caption">
 														<div class="item-caption-inner">
 															<div class="item-caption-inner1">
@@ -627,8 +665,8 @@ color:blue
 										<div class="col-2-3">
 											<div class="wrap-col">
 												<div class="item-info">
-													<a href="single.html"><h3>Rocket League: Collector Edition</h3></a>
-													<p>Rs.1999</p>
+													<h3>Rocket League: Collector Edition</h3>
+													
 													<p>Take control of your own high-flying, hard-hitting, rocket-powered Battle-Car in the critically-acclaimed, futuristic Sports-Action hit</p>
 												</div>
 											</div>
@@ -698,7 +736,7 @@ color:blue
 									<div class="item">
 										<div class="col-1-3">
 											<div class="item-container">
-												<a href="single.html">
+												<!-- <a href="single.html"> -->
 													<div class="item-caption">
 														<div class="item-caption-inner">
 															<div class="item-caption-inner1">
@@ -714,8 +752,8 @@ color:blue
 										<div class="col-2-3">
 											<div class="wrap-col">
 												<div class="item-info">
-													<a href="single.html"><h3>BATTLEBORN</h3></a>
-													<p>Rs.497</p>
+													<h3>BATTLEBORN</h3>
+													
 													<p>Battleborn is a next-gen hero-shooter brought to you by the creators of the award-winning and best-selling Borderlands franchise.</p>
 												</div>
 											</div>
@@ -782,13 +820,15 @@ color:blue
 								</div> --%>
 								<!---- Start Widget ---->
 								<div class="widget">
-									<div class="wid-header">
+									<!-- <div class="wid-header">
 										<h5>SUBSCRIBE</h5>
 									</div>
-									<div class="wid-content">
+									 --><!-- <div class="wid-content">
 										<p>For more updates about the  click below to subscribe </p>
+											
 										<a href="#"  class="button bt1">Subscribe</a>
-									</div>
+										
+									</div> -->
 								</div>
 							</div>
 						</div>

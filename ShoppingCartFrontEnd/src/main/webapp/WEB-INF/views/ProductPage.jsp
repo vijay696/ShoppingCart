@@ -98,7 +98,7 @@
 				   <li><a href="manageSupplier">Manage Supplier</a></li>
 				</ul>
 			</div>
-			<a href="" class="logo">
+			<a href="Index" class="logo">
 			
 			<img alt="" src="<c:url value="/resources/images/sonic.jpg" />"></img>
 			
@@ -198,9 +198,10 @@
 			</tr>
 			<tr>
 				<td colspan="2"><c:if test="${!empty product.name}">
-						<input type="submit" value="<spring:message text="Edit Product"/>" />
+				<center>		<input class="btn btn-xl" type="submit" value="<spring:message text="Edit Product"/>" /></center>
 					</c:if> <c:if test="${empty product.name}">
-						<input type="submit" value="<spring:message text="Add Product"/>" />
+					
+					<center>	<input class="btn btn-xl" type="submit" value="<spring:message text="Add Product"/>" /></center>
 					</c:if></td>
 			</tr>
 		</table>

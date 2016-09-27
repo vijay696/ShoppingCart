@@ -99,12 +99,6 @@ public String cont()
 	return "Contact";
 }
 
-	 
-	@RequestMapping("/single.html")
-	public String asdfghjk()
-	{
-		return "Single";
-	}
 	
 	
 	@RequestMapping("/LoginPage")
@@ -130,5 +124,69 @@ public String cont()
 	}
 
 	
+
+@RequestMapping("/play4")
+	public String reg123()
+	{
+		return "Playstation4";
+				
+	}
+
+
+@RequestMapping("/xbox1")
+	public String reg1234()
+	{
+		return "Xbox1";
+				
+	}
+
+
+@RequestMapping("/xbox360")
+	public String reg12345()
+	{
+		return "Xbox360";
+				
+	}
+
+@RequestMapping("/play3")
+	public String reg123456()
+	{
+		return "Playstation3";
+				
+	}
+
+@RequestMapping("/psp")
+	public String reg1234567()
+	{
+		return "Psp";
+				
+	}
+
+/*anu*/
+
+
+
+
+@RequestMapping("/Cthanks")
+public String loadLoginPage3() {
+	return "Cthanks";
+}
+@RequestMapping("/Logout")
+public String loadLoginPage6() {
+	return "Logout";
+}
+
+@RequestMapping("/Shipping")
+public String loadLoginPage7() {
+	return "Shipping";
+}
+@RequestMapping("/Sthanks")
+public String loadLoginPage8() {
+	return "Sthanks";
+}
+
+
+
+
 }
 	

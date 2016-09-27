@@ -96,7 +96,7 @@
 	</div>
 </header>
 <br>
-<center><h1>PC Gaming</h1></center>
+<center><h1>PlayStation 3</h1></center>
 
 <br>
 <!--////////////////////////////////////Container-->
@@ -108,8 +108,8 @@
 				<!--Start Box-->
 					<div class="zerogrid">
 						<div class="header">
-							<h1>Mafia-3</h1>
-							<h5>Platform: Windows</h5>
+							<h1>PES 2016</h1>
+							<h5>Platform: PlayStation 3</h5>
 						</div>	
 						<!-- Start of the Product description -->
 						<div class="row">
@@ -120,7 +120,7 @@
 										<div class="callbacks_container">
 				<!-- 							<ul class="rslides" id="slider"> -->
 																								
-												<img alt="" src="<c:url value="/resources/images/mafia.jpg" />"></img>
+												<img alt="" src="<c:url value="/resources/images/pes.jpg" />"></img>
 												
 													
 												
@@ -142,22 +142,20 @@
 									<div class="info">
 										<h2 class="h3">Product Description</h2>
 										
-										<p>It's 1968 and the rules have changed.   After years in Vietnam, Lincoln Clay knows this truth: Family isn't who you're born with, it's who you die for.   Now back home, in a reimagined New Orleans, Lincoln is set on rebuilding his life, but old ties 
-										keep him from leaving the city.   It will take more than a few friends to make it in this new world.  
-										 Intense gun fights, visceral hand-to-hand combat, white knuckle driving and street smarts will all be needed. 
-										 But with the right crew, tough decisions and some dirty hands, it's possible to make it to the top of the city's underworld.
-										  It's time to create a new family.  
-
-										
+										<p>The new Dynamic Weather feature will see the chance of weather changing during the match and improved weather effects
+The system will add personality to each keeper and introduces all new parameters: Catching, Clearance, Collapsing and Deflecting
+The fan favourite mode has undergone a complete overhaul and introduces a new Player Transfer system
+For the first time in the series PES 2016 will include a dynamic camera which will zoom and tilt depending on the ball position
+Players now have full control over goal celebrations! Choose between signature celebrations or unique actions with a press of a button!										
 										</p>
 									</div><!-- /.post -->
 
 									<div class="info">
 										<h2 class="h3">Product Details</h2>
 										
-										<p>ASIN: B01F1WY41C</p>
+										<p>ASIN: B01S23D41C</p>
 										
-<p>Release Date: 7 October 2016 </p> 
+<p>Release Date: 18 September 2016 </p> 
 	<p>Type: Action</p>
 									</div><!-- /.post -->
 								</div>
@@ -170,14 +168,14 @@
 								<center>		<h3>Game Information</h3>
 										
           <p>Game Information</p>
-          <p>Platform:   Windows</p>
+          <p>Platform:   PlayStation 3</p>
            
-       <p>Media: DVD-ROM</p>
+       <p>Media: Video Game</p>
 									</div></center>	
 									</div>
 								</div>
 							</div>
-								</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -199,8 +197,8 @@
 				<!--Start Box-->
 					<div class="zerogrid">
 						<div class="header">
-							<h1>Dishonored 2</h1>
-							<h5>Platform: Windows</h5>
+							<h1>Call of Duty:2 Ghosts</h1>
+							<h5>Platform: PlayStation 3</h5>
 						</div>	
 						<!-- Start of the Product description -->
 						<div class="row">
@@ -211,7 +209,7 @@
 										<div class="callbacks_container">
 				<!-- 							<ul class="rslides" id="slider"> -->
 																								
-												<img alt="" src="<c:url value="/resources/images/dishonored.jpg" />"></img>
+												<img alt="" src="<c:url value="/resources/images/call.jpg" />"></img>
 												
 													
 												
@@ -255,22 +253,19 @@
 									<div class="info">
 										<h2 class="h3">Product Description</h2>
 										
-										<p>Reprise your role as a supernatural assassin in Dishonored 2, the highly anticipated follow up to Arkane Studios 2012 Game of the Year! 
-Explore a world unlike any other as either Emily Kaldwin or Corvo Attano - both powerful assassins with their own unique set of supernatural abilities, weapons and unusual gadgets. Define your own playstyle by blending immersive first-person action,
- assassination, stealth, mobility and the game's brutal combat system. 
-Combine the tools at your disposal to creatively eliminate your enemies whether you choose to pursue them unseen or ruthlessly attack head on with weapons drawn. 
-Show no mercy and leave chaos in your wake or find a more subtle way to eliminate your targets. More than ever the choices you make will determine the outcome of each mission and ultimately the game.
-										
+										<p>The Call of Duty: Ghosts forms the tenth instalment of the popular video game collection and follows a new game plot. The game series has been branded as one of the fiercest games from the stables of Infinity Ward. Set in an era where the Unites States of America has been swallowed into a dark zone of annoyance and death, the Ghosts are ready to trouble the current generation systems as well as the next-gen gaming consoles.
+
+The game belongs to the genre of shooting strategy games played out in the first-person mode, The Call of Duty: Ghosts is developed by Infinity Ward in cooperation from the Raven Software, Neversoft and Certain Affinity. Few left over soldiers is led by retired US Army Captain Elias Walker venture out into the US dark zones and operate in secret warfare under the guise of guerrilla.
 										</p>
 									</div><!-- /.post -->
 
 									<div class="info">
 										<h2 class="h3">Product Details</h2>
 										
-										<p>ASIN: B01GA43S7Q</p>
+										<p>ASIN: B00CFARTA2</p>
 										
-<p>Release Date: 11 November 2015 </p>
-<p>Type: Adventure</p> 
+<p>Release Date: 11 july 2016 </p>
+<p>Type: Action & Shooter</p> 
 									</div><!-- /.post -->
 								</div>
 							</div>
@@ -282,9 +277,9 @@ Show no mercy and leave chaos in your wake or find a more subtle way to eliminat
 								<center>		<h3>Game Information</h3>
 										
           <p>Game Information</p>
-          <p>Platform:   Windows</p>
+          <p>Platform:   PlayStation 3</p>
            
-       <p>Media: DVD-ROM</p>
+       <p>Media: Video Game</p>
 									</div></center>	
 									</div>
 								</div>

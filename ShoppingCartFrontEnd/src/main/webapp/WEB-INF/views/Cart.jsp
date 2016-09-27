@@ -62,15 +62,9 @@ tr:nth-child(even) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	 -->
-	 
-	    
-    <script src="<c:url value="/resources/js/jquery-latest.min.js"/>"> </script>
-	<script src="<c:url value="/resources/js/script.js"/>"> </script>
-	 
-	   <style>
+	  <style>
     
     .navbar {
       margin-bottom: 50px;
@@ -102,7 +96,7 @@ tr:nth-child(even) {
     
   </style>
 
-<title>User cart</title>
+<title>THROTTLE INC</title>
 </head>
 
  
@@ -118,8 +112,7 @@ tr:nth-child(even) {
 			    <th width="120">User ID</th>
 			     
 			     <th width="120">Remove from Cart</th>
-			
-                    <th width="120">Buy Product</th>			
+			      <th width="120">Buy</th>
 			
 			</tr>
 			<c:forEach items="${cartList}" var="cart">
@@ -130,13 +123,11 @@ tr:nth-child(even) {
 					<td>${cart.productName}</td>
 					<td>${cart.userID }</td>
 					
-					
-					
-					
-					
 					<td><a href="<c:url value='cart/remove/${cart.id}' />">Delete</a></td>
+					 <td><a href="<c:url value='Buy/${cart.productName}' />">Buy</a></td> 
 					
-					<td><a href="<c:url value='buyproduct' />">Buy</a></td>
+ 
+					 
 				</tr>
 			</c:forEach>
 		</table>
@@ -149,4 +140,4 @@ tr:nth-child(even) {
 <div class="row"><div class="container-fluid"> <br></div></div>
 <div class="row"><div class="container-fluid"> <br></div></div> -->
 </body>
-</html>  
+</html>

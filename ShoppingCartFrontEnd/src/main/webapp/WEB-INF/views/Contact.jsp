@@ -57,11 +57,11 @@
 				<ul>
 				   <li class='active'><a href="Index">Home</a></li>
 				  
-				   <li><a href="single.html">About</a></li>
+				   <li><a href="about">About</a></li>
 				   
 				</ul>
 			</div>
-			<a href="" class="logo">
+			<a href="Index" class="logo">
 			
 			<img alt="" src="<c:url value="/resources/images/sonic.jpg" />"></img>
 			
@@ -123,7 +123,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div><!-- 
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="contact-header">
@@ -139,7 +139,7 @@
 									<p>info@yourdomain.com</p>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
