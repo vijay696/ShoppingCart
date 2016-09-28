@@ -44,6 +44,7 @@ public class TestCaseProduct {
 		product.setName("samsung");
 		product.setPrice(2000);
 		productDAO.saveOrUpdate(product);
+		@SuppressWarnings("unused")
 		boolean flag=productDAO.add(product);
 		assertTrue(true);
 		
@@ -61,7 +62,7 @@ public class TestCaseProduct {
 	@Test
 	public void listProductTestCase()
 	{
-		assertEquals("addProductTestCase",productDAO.list().size(), 0);
+		assertEquals("addProductTestCase",productDAO.list().size(), 3);
 	}
 	@Test
 	public void getProductTestCase()

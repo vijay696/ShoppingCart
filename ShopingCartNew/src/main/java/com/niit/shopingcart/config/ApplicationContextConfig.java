@@ -4,20 +4,18 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
-import org.apache.commons.dbcp2.BasicDataSource;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.niit.shopingcart.dao.CartDAO;
+import com.niit.shopingcart.dao.CartDAOImpl;
 //import com.niit.shopingcart.dao.CartDAO;
 //import com.niit.shopingcart.dao.CartDAOImpl;
 import com.niit.shopingcart.dao.CategoryDAO;
@@ -26,9 +24,7 @@ import com.niit.shopingcart.model.Cart;
 import com.niit.shopingcart.model.Category;
 import com.niit.shopingcart.model.Product;
 import com.niit.shopingcart.model.Supplier;
-import com.niit.shopingcart.model.User;
 import com.niit.shopingcart.model.UserDetails;
-import com.niit.shopingcart.model.shipping;
 
 
 @Configuration
@@ -70,7 +66,7 @@ public class ApplicationContextConfig {
     	sessionBuilder.addAnnotatedClasses(Supplier.class);
     	//sessionBuilder.addAnnotatedClasses(User.class);
     	sessionBuilder.addAnnotatedClasses(Product.class);
-    //	sessionBuilder.addAnnotatedClasses(Cart.class);
+    	sessionBuilder.addAnnotatedClasses(Cart.class);
     	sessionBuilder.addAnnotatedClasses(UserDetails.class);
     	//sessionBuilder.addAnnotatedClasses(shipping.class);
     	return sessionBuilder.buildSessionFactory();
@@ -86,16 +82,28 @@ public class ApplicationContextConfig {
 		return transactionManager;
 	}
     
-    @Autowired
+  
+	
+	@Autowired
     @Bean(name = "categoryDao")
-    public CategoryDAO geCategorDao(SessionFactory sessionFactory) {
+    public CategoryDAO getCategoryDao(SessionFactory sessionFactory) {
     	return new CategoryDAOImpl(sessionFactory);
     }
     
-    /*@Autowired
+    @Autowired
     @Bean(name = "cartDao")
     public CartDAO getCartDao(SessionFactory sessionFactory) {
     	return new CartDAOImpl(sessionFactory);
     }
-*/
+
+	
+	
+/*
+    @Autowired
+    @Bean(name = "cartDao")
+    public CartDAO getCartDao(SessionFactory sessionFactory) {
+    	return new CartDAOImpl(sessionFactory);
+    }
+	
+*/	
 }

@@ -16,7 +16,7 @@ public interface UserDetailsDAO {
 
 	public void saveOrUpdate(UserDetails userDetails);
 
-	public String delete(String id);
+	public String delete(UserDetails userDetails);
 
 	public void saveOrUpdate(shipping ship);
 

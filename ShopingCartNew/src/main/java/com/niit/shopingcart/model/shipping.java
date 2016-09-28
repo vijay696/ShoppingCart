@@ -38,7 +38,7 @@ public class shipping {
 		return ad1;
 	}
 
-	public void setAddress1(String address) {
+	public void setAddress1(String address, String ad1) {
 		this.ad1 = ad1;
 	}
 

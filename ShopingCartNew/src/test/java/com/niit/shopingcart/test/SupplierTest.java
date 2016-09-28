@@ -13,6 +13,7 @@ public class SupplierTest {
 	public static void main(String[] args) {
 		
 		
+		@SuppressWarnings("resource")
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 		context.scan("com.niit.shopingcart");
 		context.refresh();

@@ -44,6 +44,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 		Category CategoryToDelete = new Category();
 		CategoryToDelete.setId(id);
 		sessionFactory.getCurrentSession().delete(CategoryToDelete);
+		return;
 	}
 
 	@Transactional
@@ -73,6 +74,16 @@ public class CategoryDAOImpl implements CategoryDAO {
 		}
 		
 		return null;
+	}
+
+	public boolean delete(Category category) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void add(Category category) {
+		// TODO Auto-generated method stub
+		
 	}
 
 

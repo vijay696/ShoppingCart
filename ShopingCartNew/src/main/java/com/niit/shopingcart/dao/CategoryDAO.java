@@ -15,6 +15,10 @@ public interface CategoryDAO {
 
 	public void saveOrUpdate(Category category);
 
+	public boolean delete(Category category);
+
+	public void add(Category category);
+
 	public void delete(String id);
 
 

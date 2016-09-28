@@ -45,6 +45,7 @@ public class ProductDAOImp implements ProductDAO {
 		Product ProductToDelete = new Product();
 		ProductToDelete.setId(id);
 		sessionFactory.getCurrentSession().delete(ProductToDelete);
+		return;
 	}
 
 	@Transactional
@@ -61,6 +62,23 @@ public class ProductDAOImp implements ProductDAO {
 		
 		return null;
 	}
+	
+	
+	@Transactional
+	public Product getByName(String name) {
+		String hql = "from Product where name='" + name+"'";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		System.out.println("Inside productDAO get");
+		@SuppressWarnings("unchecked")
+		List<Product> listProduct = (List<Product>) query.list();
+		
+		if (listProduct != null && !listProduct.isEmpty()) {
+			return listProduct.get(0);
+		}
+		
+		return null;
+	}
+
 
 	public boolean delete(Product product) {
 		try{
@@ -93,4 +111,6 @@ public class ProductDAOImp implements ProductDAO {
 		return false;
 		}
 	}
+
+	
 }

@@ -84,4 +84,9 @@ public class SupplierDAOImpl implements SupplierDAO {
 		return null;
 	}
 
+	public String delete(Supplier supplier) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

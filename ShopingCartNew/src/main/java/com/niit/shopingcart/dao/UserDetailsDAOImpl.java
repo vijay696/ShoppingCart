@@ -84,5 +84,13 @@ public class UserDetailsDAOImpl implements UserDetailsDAO {
 		
 		return null;
 	}
+	
+	
+	
+	
+	public String delete(UserDetails userDetails) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
