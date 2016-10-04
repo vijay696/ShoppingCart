@@ -241,7 +241,7 @@
 
 	
 <!-- footer -->
-<footer>
+<!-- <footer>
 	<div class="zerogrid">
 		<div class="wrap-footer">
 			<div class="row">
@@ -255,7 +255,7 @@
 	</div>
 </footer>
 
-	<!-- Google Map -->
+	Google Map
 	<script>
 		$('.maps').click(function () {
 		$('.maps iframe').css("pointer-events", "auto");
@@ -266,6 +266,6 @@
 	});
 	</script>
 
-</div>
+</div> -->
 </body></html>
 	

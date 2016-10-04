@@ -178,21 +178,21 @@
 	</c:if>
 
 <!-- footer -->
-<footer>
+<!-- <footer>
 	<div class="zerogrid">
 		<div class="wrap-footer">
 			<div class="row">
 				<h3>Contact</h3>
 		<span>Phone / +91 8892754990</span></br>
 				<span>Email / vijay.gr11@gmail.com  </span></br>
-				<!-- <span>Studio / Moonshine St. 14/05 Light City </span></br>
+				<span>Studio / Moonshine St. 14/05 Light City </span></br>
 				<span><strong>Copyright 20xx - <a href="http://www.zerotheme.com" rel="nofollow" target="_blank">Html5 Templates</a> Designed by <a href="http://www.zerotheme.com" rel="nofollow" target="_blank">ZEROTHEME</a></strong></span>
-			</di -->	</div>
+			</di	</div>
 		</div>
 	</div>
 </footer>
 
-	<!-- Google Map -->
+	Google Map
 	<script>
 		$('.maps').click(function () {
 		$('.maps iframe').css("pointer-events", "auto");
@@ -203,6 +203,6 @@
 	});
 	</script>
 
-</div>
+</div> -->
 </body></html>
 	

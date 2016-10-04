@@ -2,12 +2,75 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page session="false"%>
-<link rel="stylesheet"	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-<script	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+    <!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Estore-Vijay G R</title>
+	<meta name="description" content="E-games store | vijay.gr11@gmail.com">
+	<meta name="author" content="www.google.com">
+	
+    <!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- CSS
+  ================================================== -->
+  
+ 
+  
+  	<link  href="<c:url value="/resources/css/zerogrid.css"/>" rel="stylesheet">
+	<link  href="<c:url value="/resources/css/style.css"/>" rel="stylesheet">
+	<link  href="<c:url value="/resources/css/responsiveslides.css"/>" rel="stylesheet">
+
+
+
+
+	
+	<script src="<c:url value="/resources/js/jquery-latest.min.js"/>"></script>
+	<script src="<c:url value="/resources/js/script.js"/>"></script>
+	<script src="<c:url value="/resources/js/jquery183.min.js"/>"></script>
+    <script src="<c:url value="/resources/js/responsiveslides.min.js"/>"></script>
+    <script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+		  // Slideshow 
+		  $("#slider").responsiveSlides({
+			auto: true,
+			pager: false,
+			nav: true,
+			speed: 500,
+			namespace: "callbacks",
+			before: function () {
+			  $('.events').append("<li>before event fired.</li>");
+			},
+			after: function () {
+			  $('.events').append("<li>after event fired.</li>");
+			}
+		  });
+		});
+	</script>
+	
+	
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
+	<![endif]-->
 <title>Add Cart</title>
 <style type="text/css">
 
@@ -66,7 +129,35 @@
   min-height: 50%;
 }
 </style>
+    
 </head>
+<body>
+<div class="wrap-body">
+
+<!--////////////////////////////////////Header-->
+<header class="bg-theme">
+	<div class="wrap-header zerogrid">
+		<div class="row">
+			<div id="cssmenu">
+				<ul>
+		<!-- 		   <li class='active'><a href="Index">Home</a></li>
+<li><a href="about">About</a></li>
+				   <li><a href="contact">Contact</a></li>
+		 -->		 <!--   <li><a href="login1">login</a></li>
+				   <li><a href="register">register</a></li>
+				  -->  
+				</ul>
+			</div>
+			<%-- <a href="Index" class="logo">
+			
+			<img alt="" src="<c:url value="/resources/images/sonic.jpg" />"></img>
+			
+			
+			</a>
+		 --%></div>
+	</div>
+</header>
+
 <%-- <%-- <%@include file="Header.jsp" %> 
  
  <body background = "C:\Users\veena1\Desktop\proj\accessories.jpg">
@@ -126,23 +217,26 @@
 		
 	<br>
 	<br>
-	<a href="<c:url value="/Shipping"/>"><h4>PAY NOW AND ENTER SHIPPING DETAILS.
-	</h4></a>
-	
-	<h5><ul>
-	<a href="<c:url value="/Thankyou"/>"><li> CREDIT CARD</li></a>
-	<a href="<c:url value="/Thankyou"/>"><li>DEBIT CARD</li></a>
-	<a href="<c:url value="/Thankyou"/>"><li> CASH ON DELIVERY</li></a>
+	<a class="button bt1" href="<c:url value="/Shipping"/>"> PAY NOW AND ENTER SHIPPING DETAILS.
+	</a>
+	<br>
+	<br>
+<ul>
+	<a class="btn btn-xl" href="<c:url value="/Thankyou"/>"> CREDIT CARD</a><br><br>
+	<a class="btn btn-xl" href="<c:url value="/Thankyou"/>">DEBIT CARD</a> <br><br>
+	<a class="btn btn-xl" href="<c:url value="/Thankyou"/>"> CASH ON DELIVERY</a><br>
 	
 	<br>
 	
 	
-	<a href="<c:url value="/Tk"/>"><li> CANCEL TRANSACTION</li></a>
+	<a class="button bt1" href="<c:url value="/Tk"/>"> CANCEL TRANSACTION</a>
 	</ul>
+	<br>
+	<br>
 	</h3>
 	<div>
 <!-- <a href="/Logout"><li> LOG OUT</li></a> -->
-<a href="<c:url value="/j_spring_security_logout" />">Sign Out</a>
+<a class="btn btn-xl" href="<c:url value="/j_spring_security_logout" />">Sign Out</a>
  
  
  </div>
@@ -157,5 +251,32 @@
 </footer>
 <div class="row"><div class="container-fluid"> <br></div></div>
 <div class="row"><div class="container-fluid"> <br></div></div>
- --></body>
-</html>
+ -->
+ 
+ <footer>
+	<div class="zerogrid">
+		<div class="wrap-footer">
+			<div class="row">
+				<h3>Contact</h3>
+	<span>Phone / +91 8892754990</span></br>
+				<span>Email / vijay.gr11@gmail.com  </span></br>
+				<!-- <span>Studio / Moonshine St. 14/05 Light City </span></br>
+				<span><strong>Copyright 20xx - <a href="http://www.zerotheme.com" rel="nofollow" target="_blank">Html5 Templates</a> Designed by <a href="http://www.zerotheme.com" rel="nofollow" target="_blank">ZEROTHEME</a></strong></span>
+			</di -->		</div>
+		</div>
+	</div>
+</footer>
+
+	<!-- Google Map -->
+	<script>
+		$('.maps').click(function () {
+		$('.maps iframe').css("pointer-events", "auto");
+	});
+
+	$( ".maps" ).mouseleave(function() {
+	  $('.maps iframe').css("pointer-events", "none"); 
+	});
+	</script>
+
+</div>
+</body></html>

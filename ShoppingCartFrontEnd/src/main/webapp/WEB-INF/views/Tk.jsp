@@ -11,6 +11,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-Your transaction is cancelled!!!!<a href="<c:url value="Index"/>">Continue shopping </a>
+Your transaction is cancelled!!!!<a class="button bt1" href="<c:url value="Index"/>">Continue shopping </a>
 </body>
 </html>
