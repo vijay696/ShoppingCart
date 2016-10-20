@@ -8,10 +8,10 @@ This is an dynamic web project and we used technologies like css, bootstrap, htm
 This is a basic games site where user can buy the  games based on the categories.
 
 setup:
-required tools 
-apache tomcat v.8
-elcipse mars.2
-h2 database
+required tools. 
+apache tomcat v.8.
+elcipse mars.2.
+h2 database.
 
 
 usage:
