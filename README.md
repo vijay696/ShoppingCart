@@ -3,6 +3,7 @@ backend and frontend
 
 Name:E-Games Store
 
+
 Discription: This project contains two parts, front end and back end.
 This is an dynamic web project and we used technologies like css, bootstrap, html, h2, hibernate tool, eclipse environment, jsp and spring.  
 This is a basic games site where user can buy the  games based on the categories.
