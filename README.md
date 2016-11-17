@@ -15,6 +15,7 @@ elcipse mars.2.
 h2 database.
 
 
+
 usage:
 On loading the landing page, user can view the products and to buy those products user need to register.
 After registering the user need to login and can view the categories and can buy those products.
